@@ -7,8 +7,8 @@ import { FaGulp } from "react-icons/fa";
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
+    <h1>Hi Quynh Anh </h1>
+    <p></p>
     <FaGulp />
   </Layout>
 );
