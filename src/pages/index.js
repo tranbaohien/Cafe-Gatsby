@@ -3,14 +3,22 @@ import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { FaGulp } from "react-icons/fa";
-const IndexPage = () => (
+import BackgroundSection from '../components/Globals/BackgroundSection'
+const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1 style={{textAlign:'center'}}>Hi Quynh Anh</h1>
-    {/* <p></p>
-    <FaGulp /> */}
+    <BackgroundSection img={data.img.childImageSharp.fluid}/>
   </Layout>
 );
 
 export default IndexPage;
+export const query = graphql`
+  {
+    img: file(relativePath: {eq:"default-background.jpeg"}) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }`;
